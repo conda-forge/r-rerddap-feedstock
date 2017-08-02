@@ -1,4 +1,4 @@
-{% set version = '0.3.4' %}
+{% set version = "0.4.2" %}
 
 package:
   name: r-rerddap
@@ -9,12 +9,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rerddap_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rerddap/rerddap_{{ version }}.tar.gz
-  sha256: 60acdd2a551e9737c2c5edabbee71e9d88a03b66fa081472c169b41904c5cce5
+  sha256: 89887d7f8cb16484ade92ac104e8106d9fd73ac24d45e5a1b1d8122b2576c54a
 
 build:
   number: 0
-  # No r-ncdf4 on Windows yet.
-  skip: True  # [win]
+  skip: True  # [win32]
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
@@ -23,27 +22,33 @@ build:
 requirements:
   build:
     - r-base
-    - r-data.table
+    - r-httr >=1.2.1
+    - r-dplyr >=0.5.0
+    - r-data.table >=1.10.0
+    - r-jsonlite >=1.2
+    - r-xml2 >=1.1.0
     - r-digest
-    - r-dplyr
-    - r-httr >=1.0.0
-    - r-jsonlite >=0.9.17
-    - r-ncdf4
-    - r-xml2
+    - r-ncdf4 >=1.15
+    - r-tibble
+    - r-hoardr >=0.2.0
   run:
     - r-base
-    - r-data.table
+    - r-httr >=1.2.1
+    - r-dplyr >=0.5.0
+    - r-data.table >=1.10.0
+    - r-jsonlite >=1.2
+    - r-xml2 >=1.1.0
     - r-digest
-    - r-dplyr
-    - r-httr >=1.0.0
-    - r-jsonlite >=0.9.17
-    - r-ncdf4
-    - r-xml2
+    - r-ncdf4 >=1.15
+    - r-tibble
+    - r-hoardr >=0.2.0
 
 test:
   commands:
     - R -e "library('rerddap')"  # [not win]
     - R -e \"library('rerddap')\"  # [win]
+    - conda inspect linkages -p $PREFIX r-rerddap  # [not win]
+    - conda inspect objects -p $PREFIX r-rerddap  # [osx]
 
 about:
   home: https://github.com/ropensci/rerddap
