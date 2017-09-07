@@ -14,7 +14,9 @@ Summary: General purpose R client for 'ERDDAP' servers. Includes functions to se
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/r-rerddap-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-rerddap-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-rerddap-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-rerddap-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-rerddap-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-rerddap-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-rerddap-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-rerddap-feedstock/branch/master)
 
 Current release info
 ====================
