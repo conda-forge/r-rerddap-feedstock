@@ -1,4 +1,4 @@
-{% set version = '0.6.5' %}
+{% set version = "0.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rerddap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rerddap/rerddap_{{ version }}.tar.gz
-  sha256: bb426ea5d8a6737daacf79bdaeac3e1ef60971b99453fdad7ae1dcd76472b7de
+  sha256: 567c0a2c6b31f5f7474a8e5eaf41487a75d4be8c96a4102767bbd6f0fadd5f37
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -54,12 +54,10 @@ test:
 about:
   home: https://github.com/ropensci/rerddap
   license: MIT
-  summary: 'General purpose R client for ''ERDDAP'' servers. Includes functions to search for
-    ''datasets'', get summary information on ''datasets'', and fetch ''datasets'', in
-    either ''csv'' or ''netCDF'' format. ''ERDDAP'' information: <https://upwell.pfeg.noaa.gov/erddap/information.html>.'
+  summary: "General purpose R client for 'ERDDAP' servers. Includes functions to search for 'datasets', get summary information on 'datasets', and fetch 'datasets', in either 'csv' or 'netCDF' format. 'ERDDAP' information: <https://upwell.pfeg.noaa.gov/erddap/information.html>."
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
