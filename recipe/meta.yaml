@@ -1,4 +1,4 @@
-{% set version = "0.7.4" %}
+{% set version = "0.7.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rerddap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rerddap/rerddap_{{ version }}.tar.gz
-  sha256: 380e629844f085581fed7b074509195b8a6482d4b01f5ed79bb38ca46fb46218
+  sha256: 2f14037f83038ef0b8781d2281bab36d84720b3ce4bbaf00c8b86d79f5e5cc59
 
 build:
   merge_build_host: true  # [win]
