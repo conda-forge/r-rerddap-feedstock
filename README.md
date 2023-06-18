@@ -1,11 +1,11 @@
-About r-rerddap
-===============
+About r-rerddap-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rerddap-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ropensci/rerddap
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rerddap-feedstock/blob/main/LICENSE.txt)
 
 Summary: General purpose R client for 'ERDDAP' servers. Includes functions to search for 'datasets', get summary information on 'datasets', and fetch 'datasets', in either 'csv' or 'netCDF' format. 'ERDDAP' information: <https://upwell.pfeg.noaa.gov/erddap/information.html>.
 
