@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-crul >=0.7.4
@@ -31,6 +32,7 @@ requirements:
     - r-dplyr >=0.5.0
     - r-hoardr >=0.5.2
     - r-jsonlite >=1.6
+    - r-lubridate
     - r-ncdf4 >=1.16
     - r-tibble
     - r-xml2 >=1.2.0
@@ -42,6 +44,7 @@ requirements:
     - r-dplyr >=0.5.0
     - r-hoardr >=0.5.2
     - r-jsonlite >=1.6
+    - r-lubridate
     - r-ncdf4 >=1.16
     - r-tibble
     - r-xml2 >=1.2.0
@@ -52,7 +55,7 @@ test:
     - "\"%R%\" -e \"library('rerddap')\""  # [win]
 
 about:
-  home: https://github.com/ropensci/rerddap
+  home: https://docs.ropensci.org/rerddap/, https://github.com/ropensci/rerddap
   license: MIT
   summary: "General purpose R client for 'ERDDAP' servers. Includes functions to search for 'datasets', get summary information on 'datasets', and fetch 'datasets', in either 'csv' or 'netCDF' format. 'ERDDAP' information: <https://upwell.pfeg.noaa.gov/erddap/information.html>."
   license_family: MIT
