@@ -3,7 +3,7 @@ About r-rerddap-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rerddap-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ropensci/rerddap
+Home: https://docs.ropensci.org/rerddap/, https://github.com/ropensci/rerddap
 
 Package license: MIT
 
