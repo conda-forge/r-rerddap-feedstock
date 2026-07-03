@@ -1,4 +1,4 @@
-{% set version = "1.2.3" %}
+{% set version = "1.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rerddap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rerddap/rerddap_{{ version }}.tar.gz
-  sha256: cae1661ee71448537f46d534d6c6452d82a86a08c9b49d89903dd74b0e5973d3
+  sha256: 64d2b84876d8157ae479a14b4a2e7594314d1beb5235a8505fdbaeb7d51c9510
 
 build:
   number: 0
